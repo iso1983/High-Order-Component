@@ -1,4 +1,4 @@
-This is a very good representation of how you can create a HOC/High order component.
+This is a representation of how you can create a HOC/High order component.
 
 What is the purpose of a HOC?
 
