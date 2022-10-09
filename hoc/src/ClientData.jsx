@@ -1,0 +1,6 @@
+// The fetchedData is coming from HOC that is the data from API.You are probably asking now why don't we only use the ClientData directly in App.js without using the HOC ,we could have just passed the API url from App.js to this component and fetch the data from this component and return the updated component from here back to App.js.Well this is not a good solution because What if we want to have many components that take in a url and fetches data, updates itself with that data and returns back with the updated values? Well we have to use ,useEffect and useState and axios/fetch function in each component we want to update so it will be very repetitive therefore we created HOC that does all that for us, HOC taking any component as a parameter like ClientData component and a url and making an API call and updating the component it takes in as a parameter,like ClientData component and returns a new updated component that has some API data in it.So we can pass any component like this ClientData to the HOC and that component will be updated. We could also access the age property on line 12 in App.js from here below via props.
+const ClientData = ({ fetchedData }) => {
+  return <div>{fetchedData}</div>;
+};
+
+export default ClientData;
